@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade: Conceitos e Seletores CSS</title>
+
+    <style>
+        /* CONCEITO 1: CSS INTERNO 
+           Definição: Os estilos são escritos dentro da tag <style>, no <head>.
+           É ideal para páginas únicas ou testes rápidos no VS Code.
+        */
+
+        /* 1. SELETOR UNIVERSAL (*) 
+           Definição: Seleciona todos os elementos da página (reset global). 
+        */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f7f6;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 2. SELETOR DE ELEMENTO 
+           Definição: Seleciona todas as tags de um tipo específico (ex: h1, section).
+        */
+        section {
+            background: white;
+            width: 100%;
+            max-width: 700px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 3. SELETOR DE ID (#)
+           Definição: Seleciona um único elemento exclusivo pelo seu ID.
+        */
+        #lista-seletores {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        /* 4. SELETOR DE CLASSE (.)
+           Definição: Seleciona elementos que pertencem a uma mesma categoria (classe).
+        */
+        .card-conceito {
+            background-color: #e8f4fd;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* 5. SELETOR DE ATRIBUTO ([])
+           Definição: Seleciona elementos que possuem um atributo específico (ex: target).
+        */
+        a[target="_blank"] {
+            color: #27ae60;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h1>Definições de CSS e Seletores</h1>
+
+        <div style="background-color: #fff3cd; color: #856404; padding: 10px; border: 1px solid #ffeeba; margin-bottom: 20px;">
+            <strong>CSS Inline:</strong> Este bloco usa estilo direto na tag. É útil para excessões, mas evita-se em projetos grandes.
+        </div>
+
+        <div class="card-conceito">
+            <strong>CSS Externo:</strong> (Conceito) Os estilos ficam em um arquivo <code>.css</code> separado e são vinculados via tag <code>&lt;link&gt;</code>. É o padrão profissional.
+        </div>
+
+        <div class="card-conceito">
+            <strong>O que são Seletores?</strong> São as regras que indicam ao navegador quais elementos HTML devem receber a estilização definida no CSS.
+        </div>
+
+        <ul id="lista-seletores">
+            <li><strong>1. Universal (*):</strong> Altera todos os elementos de uma vez.</li>
+            <li><strong>2. Elemento (section):</strong> Define o corpo branco do conteúdo.</li>
+            <li><strong>3. ID (#lista-seletores):</strong> Remove as bolinhas desta lista.</li>
+            <li><strong>4. Classe (.card-conceito):</strong> Estiliza estes quadros azuis repetidos.</li>
+            <li><strong>5. Atributo (a[target]):</strong> Estiliza links que abrem em nova aba.</li>
+        </ul>
+
+</body>
+</html>
