@@ -1,4 +1,4 @@
-# CSS--atividade
+# CSS-atividade
 Conceito de CSS
 CSS Interno: As regras de estilo são colocadas dentro da tag <style>, que fica no <head> do próprio arquivo HTML. É útil para páginas únicas.
 
